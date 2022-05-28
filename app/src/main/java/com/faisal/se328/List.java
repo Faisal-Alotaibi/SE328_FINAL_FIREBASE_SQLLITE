@@ -92,9 +92,11 @@ int indexCount;
                 int value= indexCount;
                 Intent i = new Intent(List.this, updateActivity.class);
                 i.putExtra("index",value);
-                startActivity(i);            }
+                startActivity(i);
+            }
         });
-        
+
+        //Auto update list
         final Handler handler = new Handler();
         Runnable refresh = new Runnable() {
             @Override
@@ -141,10 +143,10 @@ int indexCount;
 
                     }
                 });
-                handler.postDelayed(this, 5000);
+                handler.postDelayed(this, 1000);
             }
         };
-        handler.postDelayed(refresh, 5000);
+        handler.postDelayed(refresh, 1000);
 
 
 

@@ -164,9 +164,13 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     //Delete Toast
+                    Toasty.success(getBaseContext(), "DELETED",
+                            Toast.LENGTH_SHORT, true).show();
 
                 }else{
                     //failed toast
+                    Toasty.error(getBaseContext(), "Delete failed",
+                            Toast.LENGTH_SHORT, true).show();
                 }
             }
         });

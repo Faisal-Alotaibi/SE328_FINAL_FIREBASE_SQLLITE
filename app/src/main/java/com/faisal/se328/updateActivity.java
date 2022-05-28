@@ -35,8 +35,10 @@ public class updateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_update);
 
         myref = FirebaseDatabase.getInstance("https://se328-7d1b7-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Students");
+
         Bundle extras = getIntent().getExtras();
         int value = extras.getInt("index");
+
         id = (EditText) findViewById(R.id.idET);
         name = (EditText) findViewById(R.id.nameField);
         sname = (EditText) findViewById(R.id.snameField);
